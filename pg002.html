@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilo.css" />
+</head>
+
+<body>
+    <header>
+        <h1>arquivos</h1>
+        <a href="pg003.html" rel="next" target="_self" class="btn">terceira pagina</a>
+        <a href="sistema.html" rel="next" target="_self" class="voltar">
+            <img src="imagem/Voltar7.png" alt="voltar">
+        </a>
+    </header>
+    <main class="principal">
+        <section class="txt1">
+            <h2>O que são Arquivos? </h2>
+            <br>
+            <p>- Arquivos podem ser vistos como recipientes que contêm dados ou como um grupo de registros correlatos.
+                Essa correlação quer dizer que os arquivos são categorizados por tipos. Eles também são organizados no
+                sistema computacional por tipos.
+
+                - Os arquivos armazenam informações que serão utilizadas, em geral, por programas aplicativos (programas
+                de alto nível). Esses programas salvam arquivos na memória secundária do computador. </p>
+        </section>
+        <div class="hero">
+            <img src="imagem/Arquivo1.webp">
+        </div>
+        <section class="txt2">
+            <h2>Extensão de Arquivos </h2>
+            <br>
+            <p>- Normalmente a identificação de um arquivo é composta por duas partes separadas por ponto. A primeira
+                parte é a nomenclatura (nome) do arquivo e a segunda parte é chamada de extensão do arquivo e serve para
+                identificar o conteúdo (qual aplicativo executa esse arquivo). </p>
+        </section>
+        <div class="hero">
+            <img src="imagem/Arquivo2.webp">
+        </div>
+        <section class="txt3">
+            <h2>Descritor de Arquivos </h2>
+            <br>
+            <p>- O descritor de arquivo é um registro que mantém informações sobre o arquivo.
+                - As informações típicas mantidas pelo Descritor de Arquivos são:
+
+                1) Nome do arquivo;
+
+                2) Tamanho (bytes);
+
+                3) Data e hora da criação, do último acesso, da modificação;
+
+                4) Identificação do usuário que criou o arquivo;
+
+                5) Listas de controle de acesso e
+
+                6) Local do disco físico onde o arquivo foi alocado. </p>
+        </section>
+        <section class="txt4">
+            <h2>Sistema de Arquivos </h2>
+            <br>
+            <p>- O Sistema de Arquivos consiste no modo como as informações são armazenadas nos dispositivos físicos de
+                armazenamento (HD, SSD, CD, pendrive, etc...).
+
+                - Para que o Sistema Operacional possa ter controle ao acesso do disco rígido, ele estabelece diferentes
+                tipos de organizações de arquivos.
+
+                - Um disco rígido é dividido em pequenas porções chamadas setores.
+
+                - Um disco rígido possui vários discos dentro dele. Cada face de cada disco é composta por círculos
+                concêntricos chamados trilhas.
+
+
+
+                Conhecendo as partes do Disco Rígido
+
+                O atuador que é esse braço, na ponta tem uma cabeça de leitura, que vai fazendo a leitura dos arquivos.
+                Esse disco está organizado de forma magnética, em setores. Esses setores na imagem parecem uma fatia de
+                pizza. E os círculos concêntricos, de várias cores, é o que nós chamamos de trilha. O Cluster que está
+                na figura ao lado, representado de cor verde. Ele é formado por uma trilha que percorre alguns setores
+                adjacentes, onde são alocados arquivos. </p>
+        </section>
+        <div class="hero">
+            <img src="imagem/Arquivo4.webp">
+        </div>
+        <section class="txt5">
+            <h2>Diretórios </h2>
+            <br>
+            <p>Diretório é o modo como o sistema organiza logicamente os diversos arquivos contidos em um disco. (Aqui
+                nós vamos falar do disco rígido) Os diretórios podem ser organizados em um único nível (contendo todos
+                os arquivos) ou em múltiplos níveis (diretórios dentro de diretórios). Um dos principais problemas é
+                como alocar espaço em disco para que os arquivos sejam armazenados de forma eficiente e que permita
+                acesso rápido. </p>
+        </section>
+        <section class="txt6">
+            <h2>Alocação de Arquivos </h2>
+            <br>
+            <p>1) Alocação contígua (ligada)
+
+                2) Alocação com Lista Ligada
+
+                3) Alocação com Lista Usando Tabela
+
+                4) Alocação com Lista Usando um Índice </p>
+        </section>
+        <section class="txt7">
+            <h2>Alocação Contígua </h2>
+            <br>
+            <p>Esse é o esquema mais simples de alocação de arquivos, onde cada arquivo é armazenado no disco como um
+                bloco contíguo (unido) de dados. Imagine que um disco com blocos de 1KB, um pequeno arquivo de 20KB
+                seria armazenado em 20 blocos consecutivos (ou contíguos).
+                <br>
+                <br>
+               <h2>Vantagens:</h2>
+<br>
+                - Simples implementação: o controle de onde está cada arquivo no disco é feito por um único número
+                (porque no mesmo bloco consta todo o endereço do arquivo); Performance: todo bloco (arquivo) pode ser
+                lido do disco de uma única vez. Porque ele está na mesma trilha de forma sequencial.
+            </p>
+        </section>
+        <div class="hero">
+            <img src="imagem/Arquivo5.webp" alt="">
+        </div>
+        <section class="txt8">
+            <h2>Desvantagens: </h2>
+           <br>
+            <p>- A estratégia só pode ser usada se o tamanho máximo do arquivo for conhecido no momento de sua criação
+                (devido a necessidade existente em saber o tamanho total do arquivo ou quantidade de blocos que ele vai
+                ocupar). Fragmentação do disco: perde-se muito espaço útil com este esquema de alocação. Ao remover um
+                arquivo a área ocupada pelo mesmo é liberada ocasionando lacunas por todo o disco. Necessidade de
+                compactação/realocação desses espaços. (custo alto). Quando é apagado um arquivo fica “um buraco vazio
+                no disco” deixado pela trilha antes ocupada.</p>
+        </section>
+        <section class="txt9">
+            <h2>Alocação com Lista Ligada </h2>
+            <br>
+            <p>Nesta alocação é usada uma lista ligada para indicar os espaços ocupados em disco pelo arquivo. Assim,
+                não é mais necessário que o arquivo seja armazenado em posições contíguas do disco. A primeira palavra
+                de cada bloco é usada como um ponteiro para o próximo bloco e o restante do bloco é usado para armazenar
+                as informações (dados) do arquivo.
+<br>
+               <strong> Curiosidade:</strong>
+                Em computação, uma 
+                <strong>palavra (word)</strong>
+                 é a quantidade de bits que o processador ou o sistema
+                consegue manipular de uma só vez. Cada <strong>bloco de disco</strong>
+                
+                tem várias 
+
+                <strong>“palavras”</strong>.
+                Nesse contexto essa palavra
+                guarda o endereço (ou número) do próximo bloco do arquivo.
+<br>
+               <strong> Vantagens:</strong>
+
+                Não se perde espaço por fragmentação externa; qualquer bloco pode ser utilizado, permitindo que os
+                arquivos cresçam enquanto houver espaço em disco; A entrada do diretório só precisa armazenar o endereço
+                do 1º bloco (pois cada bloco aponta para o próximo). </p>
+        </section>
+        <div class="hero">
+            <img src="imagem/Arquivo6.webp" alt="">
+        </div>
+    </main>
+</body>
+
+</html>

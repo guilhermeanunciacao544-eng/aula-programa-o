@@ -1,0 +1,155 @@
+@charset "utf-8";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto,  'Helvetica Neue', arial, sans-serif;
+    color: #111;
+    background: linear-gradient(to left, #95e598, #bee9e9);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+header {
+    background: green;
+    padding: clamp(0.4rem, 1.6vw, 1rem);
+    text-align: center;
+    position: relative;
+}
+
+header h1 {
+    font-size: clamp(1.2rem, 4vw, 2rem);
+    color: #fff;
+    font-family: cursive;
+    margin: 0;
+}    
+
+.btn {
+    background: #044207;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-family: "DN sans", sans-serif;
+    font-size: 15px;
+    color: white;
+    border-radius: 20px;
+    transition: 0.5 all;
+    font-weight: bold;
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.btn:hover {
+    background: #8edd90;
+    transform: translateY(-50%) scale(1.1);
+    cursor: pointer;
+}
+
+.voltar {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    display: inline-block;
+}
+
+.voltar img {
+    width: 80px;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.voltar:hover img {
+    transform: scale(1.1);
+    filter: brightness(1.1);
+    cursor: pointer;
+}
+
+.principal {
+    margin:  18px auto ;
+    max-width: 95%;
+    background: #fafafa;
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.hero {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+    max-width: none;
+    margin-left: 50%;
+    transform: translatex(-50%);
+    height: auto;
+    object-fit: cover;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.txt1,
+.txt2,
+.txt3,
+.txt4,
+.txt5,
+.txt6,
+.txt7,
+.txt8,
+.txt9 {
+    padding: 0.5rem;
+}
+
+.txt1,
+.txt2,
+.txt3,
+.txt4,
+.txt5,
+.txt6,
+.txt7,
+.txt8,
+.txt9 {
+    margin-bottom: 0.5rem;
+    font-size: clamp(1rem, 2.2vw, 1.25rem);
+}
+
+.txt1 p,
+.txt2 p,
+.txt3 p,
+.txt4 p,
+.txt5 p,
+.txt6 p,
+.txt7 p,
+.txt8 p,
+.txt9 p   {
+    margin-bottom: 0.9rem;
+    line-height: 1.6;
+    font-size: clamp(0.95rem, 1.6vw, 1.05rem);
+    text-align: justify;
+} 
+
+@media  (max-width: 600px) {
+    .principal {
+        padding: 0.9rem;
+        gap: 0.75rem;
+        margin: 12px auto;
+    }
+
+    .hero img{
+        width: 100vw;
+    }
+    
+}
